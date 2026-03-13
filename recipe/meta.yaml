@@ -10,13 +10,13 @@ source:
 
 build:
   number: 0
-  skip: true  # [osx or ppc64le]
+  skip: true  # [osx]
 
 requirements:
   run:
     - cuda-command-line-tools {{ version }}
     - cuda-visual-tools {{ version }}
-    - gds-tools 1.14.1.1                     # [linux]
+    - gds-tools 1.14.1.1  # [linux]
 
 test:
   commands:
@@ -27,10 +27,12 @@ about:
   license_file: LICENSE.txt
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: Meta-package containing all CUDA command line and visual tools.
   description: |
     Meta-package containing all CUDA command line and visual tools.
   doc_url: https://docs.nvidia.com/cuda/index.html
+  dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
   recipe-maintainers:
