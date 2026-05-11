@@ -1,4 +1,4 @@
-{% set version = "13.1.1" %}
+{% set version = "13.2.1" %}
 
 package:
   name: cuda-tools
@@ -16,7 +16,7 @@ requirements:
   run:
     - cuda-command-line-tools {{ version }}
     - cuda-visual-tools {{ version }}
-    - gds-tools 1.16.1.26                     # [linux]
+    - gds-tools 1.17.1.22                     # [linux]
 
 test:
   commands:
@@ -27,6 +27,7 @@ about:
   license_file: LICENSE.txt
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: Meta-package containing all CUDA command line and visual tools.
   description: |
     Meta-package containing all CUDA command line and visual tools.
@@ -34,7 +35,5 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
-  skip-lints:
-    - license_file_overspecified
   recipe-maintainers:
     - conda-forge/cuda
